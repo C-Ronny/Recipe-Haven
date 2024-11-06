@@ -1,0 +1,53 @@
+body {
+  background-image: url('images/Bp2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.formbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15% auto;
+  padding: 40px;
+  width: 350px;
+  backdrop-filter: blur(9px);
+  border: 1px solid white;
+  border-radius: 30px;
+  border-color: rgb(20, 97, 51);
+}
+
+.text{
+  color:rgb(20, 97, 51);
+}
+
+#log{
+  font-weight: bolder;
+  text-align: center;
+}
+
+#login a {
+  text-decoration: none;
+}
+
+#sign-back-in:hover{
+  font-weight: bolder;
+}
+
+#forgotten:hover {
+  font-weight: bolder;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.log-in{
+  cursor: pointer;
+}
+

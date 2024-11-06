@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background: url(images/Bp2.jpg) no-repeat center center; 
+  background-size: cover; 
+}
+
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+
+nav{
+  margin: auto;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+}
+  
+.menu li{
+  list-style-type: none;
+  display: inline-block;
+}
+
+.menu a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+
+#logo{
+  color:rgb(36, 100, 62);
+}
+
+.menu a:hover {
+  font-weight: bolder;
+  color: rgb(30, 77, 49);
+  text-decoration: underline;
+}
+
+
+#Welcome{  
+  text-align: center; 
+  color:#009879;
+  margin-left: none;  
+  margin-top: 15rem;
+  font-size: 4rem;
+}
+
+#text1{
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+}
+
+#text2{
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+}
+
+#text3{
+  color: black;
+  text-align: center; 
+}
+
+svg {
+  display: none;
+}
+
+.formbox{
+  display: flex;
+}
+
+.get-started{
+  text-align: center;
+  align-items: center;  
+}
+
+.get-started button{  
+  background: #009879; 
+  border-radius: 20px; 
+  border: none; 
+  width: 306px; 
+  height: 35px; 
+  color: white;   
+}
+
+.get-started button:hover{
+  cursor: pointer;
+}
+
+.signup
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup > h1 , h3 {
+  padding: 0px 50px;
+}
+
+/* Media query for phone */
+
+@media only screen and (max-width: 598px) {
+  nav ul{
+    display: none;      
+  }
+  svg{
+    display: block;
+    color:rgb(7, 57, 49);
+    margin-right: 1rem;
+  }
+  
+  nav h1{
+    margin-left:5%
+  }
+  body{
+    background: none;
+  }
+
+  #Welcome{
+    color: rgb(12, 79, 60);
+  }
+
+  #text1{
+    color: rgb(20, 56, 49);
+  }
+
+  #text2{
+    color: rgb(106, 157, 147);
+  }
+
+  #text3{
+    color: rgb(20, 56, 49);
+  }
+
+  .formbox{
+    background: url(images/sb4.webp);
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+    padding: 10px;
+    width: 350px;
+    border-radius: 20px;
+    border: 1px solid rgb(102, 181, 133);
+    box-shadow: 0 10px 25px rgb(0, 0, 0, 0.3);
+  }
+  .formbox .signup #text{
+    color: rgb(102, 181, 133);
+  }
+  .signup{    
+    text-align: center; 
+    color:rgb(102, 181, 133);
+  }
+  #Welcome {
+    margin-top: 20%;
+    font-size: 40px;
+  }
+}
