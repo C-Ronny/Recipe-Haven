@@ -13,32 +13,15 @@
             echo "Please fill in all fields";
         }
 
-
-
-
-
-
-
-
+        // check if user already exists
+        $query = 'SELECT * FROM users WHERE username = ?';
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param('s', $username);
+        $stmt->execute();
+        
 
 
 
     }
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
