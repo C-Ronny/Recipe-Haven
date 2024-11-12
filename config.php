@@ -6,7 +6,7 @@
 $servername = 'localhost';
 $username = 'root';
 $password = '';
-$dbname = 'recipe-schema';
+$dbname = 'recipe_db';
 
 // Create a new MySQLi connection object using the specified credentials
 $conn = new  mysqli($servername, $username, $password, $dbname);
