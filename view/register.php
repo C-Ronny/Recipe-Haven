@@ -31,7 +31,7 @@
 
         if ($results->num_rows>0){
             echo "<script> alert('registration failed, user already registered');</script>";
-            echo "<script>window.location.href='register.html';</script>";
+            echo "<script>window.location.href='view/register.html';</script>";
         } else{
             // if user is not already in the database, add the user details to the database 
             // hash the password, insert the data 
@@ -41,7 +41,7 @@
 
 
 
-            echo "<script>window.location.href='recipefeed.html';</script>";
+            echo "<script>window.location.href='view/recipefeed.html';</script>";
         }
 
 
