@@ -18,6 +18,16 @@
         $stmt = $conn->prepare($query);
         $stmt->bind_param('s', $username);
         $stmt->execute();
+        $results = $stmt->get_result();
+
+        if ($results->num_rows > 0){
+            // fetch user data from the result set
+            $row = $results->fetch_assoc();
+            $user_id = $row['id'];
+            $email = $row['email'];
+            
+
+        }
         
 
 
