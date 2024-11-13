@@ -11,7 +11,7 @@
       <div class="login">
         <h1 id="sign-up-text" class="text">Sign Up</h1>
         <br>
-        <form action="" method="POST" enctype="multipart/form-data" style="padding-bottom: 10px" id="form" action="register.php">
+        <form action="" method="POST" enctype="multipart/form-data" style="padding-bottom: 10px" id="form" action="../actions/register_user.php">
           <!--FirstName-->
           <label class="text" for="firstname" id="firstname">FirstName</label>
           <br>
