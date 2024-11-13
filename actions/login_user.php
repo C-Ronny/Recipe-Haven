@@ -2,6 +2,8 @@
     // include config files for database connection
     include 'config.php';
 
+    include '../utilis/error_config.php';
+
     // start session
     session_start();
 
