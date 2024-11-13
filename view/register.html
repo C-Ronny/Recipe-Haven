@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Recipe Haven - Sign Up</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../assets/register.css">
     <link rel="icon" type="image/jpg" href="images/fav2.png" alt="Recipe Haven Icon">
   </head>
 
@@ -11,7 +11,7 @@
       <div class="login">
         <h1 id="sign-up-text" class="text">Sign Up</h1>
         <br>
-        <form action="" method="POST" enctype="multipart/form-data" style="padding-bottom: 10px" id="form" action="register_user.php">
+        <form action="" method="POST" enctype="multipart/form-data" style="padding-bottom: 10px" id="form" action="register.php">
           <!--FirstName-->
           <label class="text" for="firstname" id="firstname">FirstName</label>
           <br>
@@ -25,7 +25,7 @@
           <!--Email-->
           <label class="text" for="email" id="email">Email</label>
           <br>
-          <input style="border-radius: 20px; border: none; width: 300px; height: 30px; background-color: #ffffffe0; margin-top: 12px;" type="email" name="email"  id="email" placeholder="   johndoe@gmail.com" required>
+          <input style="border-radius: 20px; border: none; width: 300px; height: 30px; background-color: #ffffffe0; margin-top: 12px;" type="email" name="email"  id="email" placeholder="   johndoe@gmail.com">
           <br><br>
           <!--Password-->
           <label class="text" for="password" id="password">Password</label>
@@ -80,7 +80,7 @@
         
         // Last Name Validation
         let lastName = document.getElementById('lastname').value;
-        if (lastname = ''){          
+        if (lastName === ''){          
           showErrorMessage('lastname','Please enter your last name');
           isValid = false;
         }
@@ -98,7 +98,11 @@
         // Password validation
         let password = document.getElementById('password').value;
         let confirmPassword = document.getElementById('repassword').value;
-        let passwordRegEx = /^(?=.*[A-Z])(?=.*\d{3,})(?=.*[!@#$%^&*()_\-+=\[\]{}|\\:;'",.<>?/`~])[A-Za-z\d!@#$%^&*()_\-+=\[\]{}|\\:;'",.<>?/`~]{8,}$/;
+        // let passwordRegEx = /^(?=.*[A-Z])(?=.*\d{3,})(?=.*[!@#$%^&*()_\-+=\[\]{}|\\:;'",.<>?/`~])[A-Za-z\d!@#$%^&*()_\-+=\[\]{}|\\:;'",.<>?/`~]{8,}$/;
+        let passwordRegEx = /^(?=.*[A-Z])(?=.*\d.*\d.*\d)(?=.*[!@#$%^&*()_\-+=\[\]{}|\\:;'",.<>?/`~])[A-Za-z\d!@#$%^&*()_\-+=\[\]{}|\\:;'",.<>?/`~]{8,}$/
+        // let passwordRegEx = /^(?=.*[A-Z])(?=.*\d{3,})(?=.*[!@#$%^&*()_\-+=\[\]{}|\\:;'",.<>\/?`~])[A-Za-z\d!@#$%^&*()_\-+=\[\]{}|\\:;'",.<>\/?`~]{8,}$/
+
+
         if (!passwordRegEx.test(password)) {
           showErrorMessage('password', 'Invalid Password !');
           isValid = false;
@@ -108,12 +112,13 @@
           isValid = false;
         }
 
-        if (isValid) {
-          alert('Form successfully submitted!');
+        if (!isValid) {
+          document.querySelectorAll('.error').forEach(error => error.remove());
+          alert('Registration successful!');
         }
 
+
       });
-                                        
       // Error message
       function showErrorMessage(fieldId, message) {
         let field = document.getElementById(fieldId);
