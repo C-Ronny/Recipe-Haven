@@ -3,7 +3,7 @@
 <head>
     <title>Recipe Haven - Login</title>
     <link rel="stylesheet" href="../assets/Login.css">
-    <link rel="icon" type="image/jpg" href="images/fav2.png">
+    <link rel="icon" type="image/jpg" href="../assets/images/fav2.png">
 </head>
 
 <body>

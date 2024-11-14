@@ -3,7 +3,7 @@
 <head>
     <title>Recipe Haven - Sign Up</title>
     <link rel="stylesheet" href="../assets/register.css">
-    <link rel="icon" type="image/jpg" href="images/fav2.png">
+    <link rel="icon" type="image/jpg" href="../assets/images/fav2.png">
 </head>
 
 <body>
@@ -58,7 +58,7 @@
 
             <div style="text-align: center;">
                 <span class="text" style="display: inline-block;">Or do you have an account?</span>
-                <a href="LogIn.html" class="text" style="display: inline-block;"><p id="log-back-in">Log In</p></a>
+                <a href="logIn.php" class="text" style="display: inline-block;"><p id="log-back-in">Log In</p></a>
             </div>
         </div>
     </div>

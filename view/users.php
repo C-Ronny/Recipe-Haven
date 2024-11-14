@@ -24,9 +24,9 @@
       <h1>Recipe Haven</h1>
       <div class="nav-toggle">
         <ul id="nav-right-side">
-          <li><a href="LogIn.html" aria-label="Log In or Sign Out">Log In / Sign Out</a></li>
+          <li><a href="logIn.php" aria-label="Log In or Sign Out">Log In / Sign Out</a></li>
           <li><a href="#" aria-label="Recipes">Recipes</a></li>
-          <li><a href="dashboard.html" aria-label="Account">Account</a></li>
+          <li><a href="dashboard.php" aria-label="Account">Account</a></li>
         </ul>
       </div>
     </nav>
