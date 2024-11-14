@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `recipe_sharing`
+-- Database: `recipe_db`
 --
 
 -- --------------------------------------------------------
@@ -26,6 +26,12 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `comments`
 --
+
+
+DROP DATABASE IF EXISTS recipe_db;
+CREATE DATABASE recipe_db;
+USE recipe_db;
+
 
 CREATE TABLE `comments` (
   `comment_id` int(11) NOT NULL,
