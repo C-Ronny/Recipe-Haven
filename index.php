@@ -43,7 +43,7 @@
       <p id="text3">Don't have an account?</p>
       <br>
 
-      <a class="get-started" href="view/login.php">
+      <a class="get-started" href="view/register.php">
         <button>Get Started</button>
       </a>
 
