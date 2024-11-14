@@ -15,7 +15,7 @@
       <h3 id="logo">Recipe Haven</h3>
       <ul class="buttons">
         <li><a href="dashboard.php" aria-label="Dashboard">Dashboard</a></li>
-        <li><a id="on-page" href="users.php" aria-label="Users">Users</a></li>
+        <li><a href="users.php" id="on-page" aria-label="Users">Users</a></li>
         <li><a href="recipes.php" aria-label="Recipes">Recipes</a></li>
       </ul>
     </div>
@@ -25,7 +25,7 @@
       <div class="nav-toggle">
         <ul id="nav-right-side">
           <li><a href="logIn.php" aria-label="Log In or Sign Out">Log In / Sign Out</a></li>
-          <li><a href="#" aria-label="Recipes">Recipes</a></li>
+          <li><a href="saved_recipes.php" aria-label="Recipes">Recipes</a></li>
           <li><a href="dashboard.php" aria-label="Account">Account</a></li>
         </ul>
       </div>
