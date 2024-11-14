@@ -9,6 +9,7 @@
 </head>
 <body>
   <section class="hero">
+    <!--Nav bar-->
     <nav class="menu">
       <h1 id="logo">Recipe Haven</h1>
       <ul>
@@ -16,7 +17,7 @@
       </ul>
       <div>
         <ul id="nav-right-side">
-          <li><a href="logIn.php">Log In / Sign Out</a></li>
+          <li><a href="../actions/logout.php">Sign Out</a></li>
           <li><a href="recipes.php">Recipes</a></li>
           <li><a href="logIn.html">Account</a></li>
         </ul>
