@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Recipe Haven - Sign Up</title>
+    <title>Recipe Haven | Sign Up</title>
     <link rel="stylesheet" href="../assets/register.css">
     <link rel="icon" type="image/jpg" href="../assets/images/fav2.png">
 </head>

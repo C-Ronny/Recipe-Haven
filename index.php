@@ -36,7 +36,7 @@
         <p id="text3">Don't have an account?</p>
         <br>
         
-        <a class="get-started" href="recipefeed.html">
+        <a class="get-started" href="login.php">
           <button>Get Started</button>
         </a>      
         

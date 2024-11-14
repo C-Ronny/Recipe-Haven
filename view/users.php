@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>User Management</title>
-    <link rel="stylesheet" href="users.css">
-    <link rel="icon" type="image/jpg" href="images/fav2.png" alt="Recipe Haven Icon">
+    <link rel="stylesheet" href="../assets/users.css">
+    <link rel="icon" type="image/jpg" href="../assets/images/fav2.png" alt="Recipe Haven Icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -14,9 +14,9 @@
     <div class="sidebar">
       <h3 id="logo">Recipe Haven</h3>
       <ul class="buttons">
-        <li><a href="dashboard.html" aria-label="Dashboard">Dashboard</a></li>
-        <li><a id="on-page" href="users.html" aria-label="Users">Users</a></li>
-        <li><a href="recipes.html" aria-label="Recipes">Recipes</a></li>
+        <li><a href="dashboard.php" aria-label="Dashboard">Dashboard</a></li>
+        <li><a id="on-page" href="users.php" aria-label="Users">Users</a></li>
+        <li><a href="recipes.php" aria-label="Recipes">Recipes</a></li>
       </ul>
     </div>
 

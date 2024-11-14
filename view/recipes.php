@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Management</title>
-    <link rel="stylesheet" href="recipes.css">
-    <link rel="icon" type="image/jpg" href="images/fav2.png" alt="Recipe Haven Icon">
+    <link rel="stylesheet" href="../assets/recipes.css">
+    <link rel="icon" type="image/jpg" href="../assets/images/fav2.png" alt="Recipe Haven Icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -16,9 +16,9 @@
     <div class="sidebar">
       <h3 id="logo">Recipe Haven</h3>
       <ul class="buttons">
-        <li><a href="dashboard.html" aria-label="Dashboard">Dashboard</a></li>
-        <li><a href="users.html" aria-label="Users">Users</a></li>
-        <li><a id="on-page" href="recipes.html" aria-label="Recipes">Recipes</a></li>
+        <li><a href="dashboard.php" aria-label="Dashboard">Dashboard</a></li>
+        <li><a href="users.php" aria-label="Users">Users</a></li>
+        <li><a id="on-page" href="recipes.php" aria-label="Recipes">Recipes</a></li>
       </ul>
     </div>
 
@@ -26,9 +26,9 @@
       <h1>Recipe Haven</h1>
       <div class="nav-toggle">
         <ul id="nav-right-side">
-          <li><a href="LogIn.html" aria-label="Log In or Sign Out">Log In / Sign Out</a></li>
-          <li><a href="#" aria-label="Recipes">Recipes</a></li>
-          <li><a href="dashboard.html" aria-label="Account">Account</a></li>
+          <li><a href="logIn.php" aria-label="Log In or Sign Out">Log In / Sign Out</a></li>
+          <li><a href="saved_recipes.php" aria-label="Recipes">Recipes</a></li>
+          <li><a href="dashboard.php" aria-label="Account">Account</a></li>
         </ul>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -372,53 +372,53 @@
     <script>    
 
       // Mock data for the recipes (In a real application, this would come from a server or database)
-const recipes = [
-  {
-    id: 7,
-    name: "Chicken Sandwich",
-    image: "",
-    ingredientOrigin: "USA",
-    ingredientNames: "Chicken, Bread, Lettuce, Mayo",
-    nutritionalValue: "High protein, low carb",
-    allergenInfo: "Contains gluten, dairy",
-    shelfLife: "2 days in fridge",
-    quantity: 2,
-    unit: "sandwiches",
-    prepTime: 15,
-    cookTime: 10,
-    servingSize: "1 sandwich",
-    foodDescription: "A delicious and easy-to-make sandwich.",
-    calories: 300,
-    foodOrigin: "American",
-    instructions: "1. Cook the chicken. 2. Toast the bread. 3. Assemble sandwich."
-  }
-];
+      const recipes = [
+        {
+          id: 7,
+          name: "Chicken Sandwich",
+          image: "",
+          ingredientOrigin: "USA",
+          ingredientNames: "Chicken, Bread, Lettuce, Mayo",
+          nutritionalValue: "High protein, low carb",
+          allergenInfo: "Contains gluten, dairy",
+          shelfLife: "2 days in fridge",
+          quantity: 2,
+          unit: "sandwiches",
+          prepTime: 15,
+          cookTime: 10,
+          servingSize: "1 sandwich",
+          foodDescription: "A delicious and easy-to-make sandwich.",
+          calories: 300,
+          foodOrigin: "American",
+          instructions: "1. Cook the chicken. 2. Toast the bread. 3. Assemble sandwich."
+        }
+      ];
 
-function editUser(recipeId) {
-  const recipe = recipes.find(r => r.id === recipeId);
+      function editUser(recipeId) {
+        const recipe = recipes.find(r => r.id === recipeId);
 
-  if (recipe) {
-    document.getElementById('recipeName').value = recipe.name;
-    document.getElementById('ingredientOrigin').value = recipe.ingredientOrigin;
-    document.getElementById('ingredientNames').value = recipe.ingredientNames;
-    document.getElementById('nutritionalValue').value = recipe.nutritionalValue;
-    document.getElementById('allergenInfo').value = recipe.allergenInfo;
-    document.getElementById('shelfLife').value = recipe.shelfLife;
-    document.getElementById('quantity').value = recipe.quantity;
-    document.getElementById('unit').value = recipe.unit;
-    document.getElementById('prepTime').value = recipe.prepTime;
-    document.getElementById('cookTime').value = recipe.cookTime;
-    document.getElementById('servingSize').value = recipe.servingSize;
-    document.getElementById('foodDescription').value = recipe.foodDescription;
-    document.getElementById('calories').value = recipe.calories;
-    document.getElementById('foodOrigin').value = recipe.foodOrigin;
-    document.getElementById('instructions').value = recipe.instructions;
-    
-  
-    var modal = new bootstrap.Modal(document.getElementById('editRecipeModal'));
-    modal.show();
-  }
-}
+        if (recipe) {
+          document.getElementById('recipeName').value = recipe.name;
+          document.getElementById('ingredientOrigin').value = recipe.ingredientOrigin;
+          document.getElementById('ingredientNames').value = recipe.ingredientNames;
+          document.getElementById('nutritionalValue').value = recipe.nutritionalValue;
+          document.getElementById('allergenInfo').value = recipe.allergenInfo;
+          document.getElementById('shelfLife').value = recipe.shelfLife;
+          document.getElementById('quantity').value = recipe.quantity;
+          document.getElementById('unit').value = recipe.unit;
+          document.getElementById('prepTime').value = recipe.prepTime;
+          document.getElementById('cookTime').value = recipe.cookTime;
+          document.getElementById('servingSize').value = recipe.servingSize;
+          document.getElementById('foodDescription').value = recipe.foodDescription;
+          document.getElementById('calories').value = recipe.calories;
+          document.getElementById('foodOrigin').value = recipe.foodOrigin;
+          document.getElementById('instructions').value = recipe.instructions;
+          
+        
+          var modal = new bootstrap.Modal(document.getElementById('editRecipeModal'));
+          modal.show();
+        }
+      }
 
 
       
