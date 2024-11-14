@@ -8,8 +8,8 @@
   <meta name="keywords" content="food, recipes, cooking, gourmet">
 
   <title>Welcome</title>
-  <link rel="stylesheet" href="../assets/index.css">
-  <link rel="icon" type="image/jpg" href="../assets/images/fav2.png" alt="Recipe Haven Icon">
+  <link rel="stylesheet" href="assets/index.css">
+  <link rel="icon" type="image/jpg" href="assets/images/fav2.png" alt="Recipe Haven Icon">
 </head>
 
 <body>
@@ -18,9 +18,9 @@
 
     <div>
       <ul id="nav-right-side">
-        <li><a href="../view/logIn.php">Log In / Sign Out</a></li>
-        <li><a href="../view/saved_recipes.php">Recipes</a></li>
-        <li><a href="../view/dashboard.php">Account</a></li>
+        <li><a href="view/logIn.php">Log In / Sign Out</a></li>
+        <li><a href="view/saved_recipes.php">Recipes</a></li>
+        <li><a href="view/dashboard.php">Account</a></li>
       </ul>
 
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-baseline-density-small">
@@ -43,7 +43,7 @@
       <p id="text3">Don't have an account?</p>
       <br>
 
-      <a class="get-started" href="../view/login.php">
+      <a class="get-started" href="view/login.php">
         <button>Get Started</button>
       </a>
 
