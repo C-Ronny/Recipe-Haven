@@ -101,14 +101,14 @@ body {
   align-items: left;
 }
 
-.message {
+/* .message {
   text-align: left;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   margin-top: 1rem;
   color: rgba(107, 114, 128, 1);
-}
+} */
 
 /*Recipe Chart*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");

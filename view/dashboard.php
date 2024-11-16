@@ -50,9 +50,9 @@
     <div class="cards">
       <!--Number of Users-->
       <div class="card" id="users">
-        <h3 class="name">No. of Users</h3>
-        <h1 class="number">XX</h1>                    
-        <h5 class="message">+50 new Users this month</h5>
+        <h3 class="name"  >No. of Users</h3>
+        <h1 class="number" id="total_users">XX</h1>                    
+        <!-- <h5 class="message">+50 new Users this month</h5> -->
       </div>
     
       <!--Number of Recipes-->
