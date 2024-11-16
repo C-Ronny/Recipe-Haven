@@ -169,7 +169,7 @@
 
   </div>
 
-  <script src="dashboard.js"></script>
+  <script src="../functions/dashboard.js"></script>
 
 </body>
 
