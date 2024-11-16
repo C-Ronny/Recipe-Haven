@@ -1,5 +1,5 @@
 <?php
-require '../db/config.php';
+require 'config.php';
 
 // Fetch total users
 $queryUsers = "SELECT COUNT(*) AS total_users FROM users";
