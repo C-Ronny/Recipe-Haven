@@ -30,7 +30,7 @@
 
                 <div style="text-align: center">
                     <span class="text">or</span>
-                    <a href="register.html" class="text" id="sign-back-in">Create an Account</a>
+                    <a href="register.php" class="text" id="sign-back-in">Create an Account</a>
                 </div>
                 <br><br>
             </form>
