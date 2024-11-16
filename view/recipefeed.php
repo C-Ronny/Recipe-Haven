@@ -18,7 +18,7 @@
       <div>
         <ul id="nav-right-side">
           <li><a href="../actions/logout.php">Sign Out</a></li>
-          <li><a href="saved_recipes.php">Recipes</a></li>
+          <li><a href="saved_recipes.php">My Recipes</a></li>
           <li><a href="user_dashboard.php">Account</a></li>
         </ul>
         <!-- Menu Icon -->
