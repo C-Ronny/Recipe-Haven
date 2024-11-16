@@ -58,8 +58,8 @@
       <!--Number of Recipes-->
       <div class="card" id="recipes">
         <h3 class="name">No. of Recipes</h3>
-        <h1 class="number">XX</h1>                    
-        <h5 class="message">+25 added recipes this month</h5>
+        <h1 class="number" id="total_recipes"></h1>                    
+        <!-- <h5 class="message">+25 added recipes this month</h5> -->
       </div>
     
       <!--Recipe Chart-->

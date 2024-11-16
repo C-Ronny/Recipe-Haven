@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
           totalUsersElement.textContent = data.totalUsers;
 
           // Update total recipes
-          const totalRecipesElement = document.querySelector('#recipes .number');
+          const totalRecipesElement = document.getElementById('total_recipes');
           totalRecipesElement.textContent = data.totalRecipes;
 
           // Update top 5 users
