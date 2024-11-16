@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Redirect to appropriate page
             if ($userrole == 1) {
-                header('Location: dashboard.php');
+                header('Location: ../view/dashboard.php');
             } else {
                 header('Location: ../view/recipefeed.php');
             }
