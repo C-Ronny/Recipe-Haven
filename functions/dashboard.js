@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch data from the server
-  fetch('./data_fetch.php')
+  fetch('../db/data_fetch.php')
       .then(response => response.json())
       .then(data => {
           // Update total users
