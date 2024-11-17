@@ -72,9 +72,8 @@
               <div class="mb-3">
                 <label for="userRole" class="form-label">Role</label>
                 <select class="form-control" id="userRole" required>
-                  <option value="1">Super Admin</option>
-                  <option value="2">Admin</option>
-                  <option value="3">User</option>
+                  <option value="1">Admin</option>
+                  <option value="2">User</option>
                 </select>
               </div>
               <button type="submit" class="btn btn-primary w-100">Save Changes</button>
@@ -83,28 +82,6 @@
         </div>
       </div>
     </div>
-
-
-<!-- <form id="editUserForm">
-    <div class="mb-3">
-        <label for="userName" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="userName" required>
-    </div>
-    <div class="mb-3">
-        <label for="userEmail" class="form-label">Email</label>
-        <input type="email" class="form-control" id="userEmail" disabled>
-    </div>
-    <div class="mb-3">
-        <label for="userRole" class="form-label">Role</label>
-        <select class="form-control" id="userRole" required>
-            <option value="1">Super Admin</option>
-            <option value="2">Admin</option>
-            <option value="3">User</option>
-        </select>
-    </div>
-    <button type="submit" class="btn btn-primary w-100">Save Changes</button>
-</form> -->
-
 
 <!-- Modal for viewing more details -->
 <div id="viewMoreModal" class="modal" tabindex="-1">
