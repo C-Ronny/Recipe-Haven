@@ -52,7 +52,32 @@
     </div>
 
     <!-- Modal for editing user -->
-    <form id="editUserForm">
+<div id="editUserModal" class="modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editUserForm">
+          <div class="mb-3">
+            <label for="userName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="userName">
+          </div>
+          <div class="mb-3">
+            <label for="userEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="userEmail">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <form id="editUserForm">
     <div class="mb-3">
         <label for="userName" class="form-label">Full Name</label>
         <input type="text" class="form-control" id="userName" required>
@@ -70,7 +95,7 @@
         </select>
     </div>
     <button type="submit" class="btn btn-primary w-100">Save Changes</button>
-</form>
+</form> -->
 
 
 <!-- Modal for viewing more details -->
