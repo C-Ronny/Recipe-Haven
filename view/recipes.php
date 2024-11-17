@@ -56,7 +56,7 @@
           <tr>
             <td>1</td>
             <td>Pancakes</td>
-            <td>Domenic</td>
+            <td>Dominic</td>
             <td>Breakfast</td>
             <td>2024-01-15</td>
             <td>
@@ -64,73 +64,7 @@
               <button onclick="confirmDelete()">Delete</button>
             </td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td>Fruit Salad</td>
-            <td>Sally</td>
-            <td>Snack</td>
-            <td>2024-01-18</td>
-            <td>
-              <button onclick="editRecipe()">Edit</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr></tr>
-            <td>3</td>
-            <td>Grilled Cheese</td>
-            <td>Nick</td>
-            <td>Lunch</td>
-            <td>2024-01-20</td>
-            <td>
-              <button onclick="editRecipe()">Edit</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Spaghetti</td>
-            <td>Anna</td>
-            <td>Dinner</td>
-            <td>2024-01-22</td>
-            <td>
-              <button onclick="editRecipe()">Edit</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Omelette</td>
-            <td>Chris</td>
-            <td>Breakfast</td>
-            <td>2024-01-25</td>
-            <td>
-              <button onclick="editRecipe()">Edit</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Energy Bars</td>
-            <td>Emily</td>
-            <td>Snack</td>
-            <td>2024-01-28</td>
-            <td>
-              <button onclick="editRecipe()">Edit</button>              
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="num">7</td>
-            <td class="recipe_name">Chicken Sandwich</td>
-            <td class="author_name">John</td>
-            <td class="food_type">Lunch</td>
-            <td class="date">2024-01-30</td>
-            <td>
-              <button onclick="editUser(7)">Edit</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          
+        
         </tbody>
       </table>
 
