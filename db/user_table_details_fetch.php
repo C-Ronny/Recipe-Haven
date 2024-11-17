@@ -7,8 +7,8 @@ $query = "
         CONCAT(fname, ' ', lname) AS fullname,
         email,
         CASE 
-            WHEN role = 1 THEN 'Super Admin'
-            WHEN role = 2 THEN 'Admin'
+            WHEN role = 1 THEN 'Admin'
+            WHEN role = 2 THEN 'User'
             ELSE 'User'
         END AS role,
         created_at 
