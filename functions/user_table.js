@@ -25,11 +25,48 @@ document.addEventListener("DOMContentLoaded", function () {
                 const registrationDateCell = document.createElement('td');
                 registrationDateCell.textContent = new Date(user.created_at).toLocaleDateString();
 
+                ////////////////////////////////////////////////////////////////////////////////////
+                // const edit = document.createElement('td');
+                // edit.textContent = 'Edit';
+                // edit.onclick = "edituser(1)";
+                
+
+                // const del = document.createElement('td');
+                // del.textContent = 'Delete';
+                // del.onclick = "confirmDelete()";
+
+                
+                ////////////////////////////////////////////////////////////////////////////////////
+                ////////////////////////////////////////////////////////////////////////////////////
+                const edit = document.createElement('td');
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Edit';
+                editButton.onclick = function() { editUser(1); }; // Attach function properly
+                edit.appendChild(editButton);
+
+                const del = document.createElement('td');
+                const delButton = document.createElement('button');
+                delButton.textContent = 'Delete';
+                delButton.onclick = function() { confirmDelete(); }; // Attach function properly
+                del.appendChild(delButton);
+                ////////////////////////////////////////////////////////////////////////////////////
+                ////////////////////////////////////////////////////////////////////////////////////
+
+
+
+                
+                ////////////////////////////////////////////////////////////////////////////////////
+
                 // Append cells to the row
                 row.appendChild(fullNameCell);
                 row.appendChild(emailCell);
                 row.appendChild(roleCell);
                 row.appendChild(registrationDateCell);
+                
+                //////////////////////////////////////////
+                row.appendChild(edit);
+                row.appendChild(del);
+                //////////////////////////////////////////
 
                 // Append the row to the table body
                 tableBody.appendChild(row);
@@ -37,3 +74,15 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error('Error fetching user data:', error));
 });
+
+
+// Delete Button
+const deleteBtn = document.createElement("button");
+deleteBtn.textContent = "Delete Task";
+deleteBtn.className = 'delete-btn';
+deleteBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // 
+    taskItem.remove();
+    delete_task(taskItem.getAttribute('task-id'));
+});
+taskItem.appendChild(deleteBtn);

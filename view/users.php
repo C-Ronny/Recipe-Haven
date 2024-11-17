@@ -33,167 +33,18 @@
 
     <div class="content">
       <h1>Users</h1>
-      <!-- <table class="content-table">
+
+      <table class="content-table">
         <thead>
           <tr>
             <th>Full Name</th>
             <th>Email</th>
             <th>Role</th>
             <th>Registration Date</th>
+            <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Domenic</td>
-            <td>domenic@example.com</td>
-            <td>
-              <button onclick="editUser(1)">Edit</button>
-              <button onclick="viewMore('Domenic', 'domenic@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Sally</td>
-            <td>sally@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('Sally', 'sally@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Nick</td>
-            <td>nick@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>            
-              <button onclick="viewMore('Nick', 'nick@example.com')">View More</button> 
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Anna</td>
-            <td>anna@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('Anna', 'anna@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Chris</td>
-            <td>chris@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('Chris', 'chris@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Emily</td>
-            <td>emily@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('Emily', 'emily@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>John</td>
-            <td>john@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('John', 'john@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>Linda</td>
-            <td>linda@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('Linda', 'linda@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>George</td>
-            <td>george@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('George', 'george@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>Monica</td>
-            <td>monica@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('Monica', 'monica@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>Frank</td>
-            <td>frank@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('Frank', 'frank@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>Jessica</td>
-            <td>jessica@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('Jessica', 'jessica@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td>Michael</td>
-            <td>michael@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>              
-              <button onclick="viewMore('Micheal', 'micheal@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>14</td>
-            <td>Rebecca</td>
-            <td>rebecca@example.com</td>
-            <td>
-              <button onclick="editUser(2)">Edit</button>
-              <button onclick="viewMore('Rebecca', 'rebecca@example.com')">View More</button>
-              <button onclick="confirmDelete()">Delete</button>
-            </td>
-          </tr>
-        </tbody>
-      </table> -->
-      <table class="content-table">
-        <thead>
-            <tr>
-                <th>Full Name</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Registration Date</th>
-            </tr>
-        </thead>
+
         <tbody>
             <!-- Rows will be populated dynamically by user_table.js -->
         </tbody>
@@ -267,14 +118,6 @@
         // Load user data dynamically based on userId
         var editModal = new bootstrap.Modal(document.getElementById('editUserModal'));
         editModal.show();
-      }
-
-      // View More user details in a modal
-      function viewMore(name, email) {
-        document.getElementById("viewName").innerText = name;
-        document.getElementById("viewEmail").innerText = email;
-        var viewMoreModal = new bootstrap.Modal(document.getElementById('viewMoreModal'));
-        viewMoreModal.show();
       }
 
       // Show delete confirmation
