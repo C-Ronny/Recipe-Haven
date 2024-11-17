@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch user data from the server
-    fetch('../db/user_table_details_fetch.php')
+    fetch('../php/user_table_details_fetch.php')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.querySelector('.content-table tbody');
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             tableBody.innerHTML = '';
 
             // Populate the table with user data
-            data.forEach((user, index) => {
+            data.forEach(user => {
                 const row = document.createElement('tr');
 
                 // Create table cells
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 editButton.textContent = 'Edit';
                 editButton.className = 'btn btn-primary';
                 editButton.onclick = function () {
-                    openEditModal(index, user);
+                    openEditModal(user);
                 };
                 editCell.appendChild(editButton);
 
@@ -61,14 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Open Edit Modal
-function openEditModal(index, user) {
+function openEditModal(user) {
     const editModal = new bootstrap.Modal(document.getElementById('editUserModal'));
     document.getElementById('userName').value = user.fullname;
     document.getElementById('userEmail').value = user.email;
     document.getElementById('userRole').value = user.role;
     editModal.show();
 
-    // Save changes on submit
+    // Save changes on form submit
     document.getElementById('editUserForm').onsubmit = function (e) {
         e.preventDefault();
         saveChanges(user.email);
@@ -81,7 +81,7 @@ function saveChanges(email) {
     const updatedName = document.getElementById('userName').value;
     const updatedRole = document.getElementById('userRole').value;
 
-    fetch('../php/user_edit.php', {
+    fetch('../db/user_edit.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ function confirmDelete(email) {
 
 // Delete User (AJAX)
 function deleteUser(email) {
-    fetch('../php/user_delete.php', {
+    fetch('../db/user_delete.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
