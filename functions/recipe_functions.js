@@ -98,7 +98,110 @@ function editRecipe(recipeId) {
         .catch(error => console.error('Error fetching recipe details:', error));
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Fetch recipes and populate the table (same as before)
+  fetch('../php/recipe_functions.php')
+      .then(response => response.json())
+      .then(data => {
+          const tableBody = document.querySelector('.content-table tbody');
+          tableBody.innerHTML = '';
+          data.forEach(recipe => appendRecipeToTable(recipe, tableBody));
+      })
+      .catch(error => console.error('Error fetching recipes:', error));
+});
 
+// Function to append a recipe row to the table
+function appendRecipeToTable(recipe, tableBody) {
+  const row = document.createElement('tr');
+
+  // Add table cells
+  const idCell = document.createElement('td');
+  idCell.textContent = recipe.id;
+
+  const titleCell = document.createElement('td');
+  titleCell.textContent = recipe.name;
+
+  const authorCell = document.createElement('td');
+  authorCell.textContent = recipe.author;
+
+  const typeCell = document.createElement('td');
+  typeCell.textContent = recipe.type;
+
+  const dateCell = document.createElement('td');
+  dateCell.textContent = new Date(recipe.date_created).toLocaleDateString();
+
+  const actionsCell = document.createElement('td');
+
+  // Add Edit and Delete buttons
+  const editButton = document.createElement('button');
+  editButton.textContent = 'Edit';
+  editButton.classList.add('btn', 'btn-primary', 'me-2');
+  editButton.onclick = () => editRecipe(recipe.id);
+  actionsCell.appendChild(editButton);
+
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete';
+  deleteButton.classList.add('btn', 'btn-danger');
+  deleteButton.onclick = () => confirmDelete(recipe.id);
+  actionsCell.appendChild(deleteButton);
+
+  // Append cells to the row
+  row.appendChild(idCell);
+  row.appendChild(titleCell);
+  row.appendChild(authorCell);
+  row.appendChild(typeCell);
+  row.appendChild(dateCell);
+  row.appendChild(actionsCell);
+
+  // Append row to the table body
+  tableBody.appendChild(row);
+}
+
+// Show modal for adding a recipe
+document.getElementById('create').addEventListener('click', function () {
+  const modal = new bootstrap.Modal(document.getElementById('editRecipeModal'));
+  document.getElementById('editRecipeForm').reset();
+  modal.show();
+});
+
+// Handle form submission for adding a recipe
+document.getElementById('editRecipeForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  // Gather form data
+  const formData = {
+      name: document.getElementById('recipeName').value,
+      type: document.getElementById('recipeType').value,
+      description: document.getElementById('foodDescription').value,
+      preparation_time: parseInt(document.getElementById('prepTime').value, 10),
+      cooking_time: parseInt(document.getElementById('cookTime').value, 10),
+      created_by: 1 // Example: Super Admin ID (replace with logged-in user ID)
+  };
+
+  // Send data to the server
+  fetch('../php/recipe_add.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+  })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              // Append new recipe to the table
+              formData.id = data.id; // Add ID to the recipe
+              formData.date_created = new Date().toISOString(); // Add current date
+              const tableBody = document.querySelector('.content-table tbody');
+              appendRecipeToTable(formData, tableBody);
+
+              // Close the modal
+              const modal = bootstrap.Modal.getInstance(document.getElementById('editRecipeModal'));
+              modal.hide();
+          } else {
+              alert('Failed to add recipe: ' + data.error);
+          }
+      })
+      .catch(error => console.error('Error adding recipe:', error));
+});
 
 
 
