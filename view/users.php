@@ -52,29 +52,26 @@
     </div>
 
     <!-- Modal for editing user -->
-<div id="editUserModal" class="modal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Edit User</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form id="editUserForm">
-          <div class="mb-3">
-            <label for="userName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="userName">
-          </div>
-          <div class="mb-3">
-            <label for="userEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="userEmail">
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Save Changes</button>
-        </form>
-      </div>
+    <form id="editUserForm">
+    <div class="mb-3">
+        <label for="userName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="userName" required>
     </div>
-  </div>
-</div>
+    <div class="mb-3">
+        <label for="userEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="userEmail" disabled>
+    </div>
+    <div class="mb-3">
+        <label for="userRole" class="form-label">Role</label>
+        <select class="form-control" id="userRole" required>
+            <option value="1">Super Admin</option>
+            <option value="2">Admin</option>
+            <option value="3">User</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+</form>
+
 
 <!-- Modal for viewing more details -->
 <div id="viewMoreModal" class="modal" tabindex="-1">
@@ -85,8 +82,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p><strong>Name:</strong> <span id="viewName"></span></p>
-        <p><strong>Email:</strong> <span id="viewEmail"></span></p>
+        <p><strong>First Name:</strong> <span id="viewName"></span></p>
+        <p><strong>Last Name:</strong> <span id="viewName"></span></p>
+        <p><strong>Role:</strong> <span id="viewRole"></span></p>
       </div>
     </div>
   </div>

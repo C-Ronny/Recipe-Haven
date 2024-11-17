@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             tableBody.innerHTML = '';
 
             // Populate the table with user data
-            data.forEach(user => {
+            data.forEach((user, index) => {
                 const row = document.createElement('tr');
 
                 // Create table cells
@@ -25,48 +25,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 const registrationDateCell = document.createElement('td');
                 registrationDateCell.textContent = new Date(user.created_at).toLocaleDateString();
 
-                ////////////////////////////////////////////////////////////////////////////////////
-                // const edit = document.createElement('td');
-                // edit.textContent = 'Edit';
-                // edit.onclick = "edituser(1)";
-                
-
-                // const del = document.createElement('td');
-                // del.textContent = 'Delete';
-                // del.onclick = "confirmDelete()";
-
-                
-                ////////////////////////////////////////////////////////////////////////////////////
-                ////////////////////////////////////////////////////////////////////////////////////
-                const edit = document.createElement('td');
+                // Edit Button
+                const editCell = document.createElement('td');
                 const editButton = document.createElement('button');
                 editButton.textContent = 'Edit';
-                editButton.onclick = function() { editUser(1); }; // Attach function properly
-                edit.appendChild(editButton);
+                editButton.className = 'btn btn-primary';
+                editButton.onclick = function () {
+                    openEditModal(index, user);
+                };
+                editCell.appendChild(editButton);
 
-                const del = document.createElement('td');
-                const delButton = document.createElement('button');
-                delButton.textContent = 'Delete';
-                delButton.onclick = function() { confirmDelete(); }; // Attach function properly
-                del.appendChild(delButton);
-                ////////////////////////////////////////////////////////////////////////////////////
-                ////////////////////////////////////////////////////////////////////////////////////
-
-
-
-                
-                ////////////////////////////////////////////////////////////////////////////////////
+                // Delete Button
+                const deleteCell = document.createElement('td');
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.className = 'btn btn-danger';
+                deleteButton.onclick = function () {
+                    confirmDelete(user.email);
+                };
+                deleteCell.appendChild(deleteButton);
 
                 // Append cells to the row
                 row.appendChild(fullNameCell);
                 row.appendChild(emailCell);
                 row.appendChild(roleCell);
                 row.appendChild(registrationDateCell);
-                
-                //////////////////////////////////////////
-                row.appendChild(edit);
-                row.appendChild(del);
-                //////////////////////////////////////////
+                row.appendChild(editCell);
+                row.appendChild(deleteCell);
 
                 // Append the row to the table body
                 tableBody.appendChild(row);
@@ -75,14 +60,74 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error('Error fetching user data:', error));
 });
 
+// Open Edit Modal
+function openEditModal(index, user) {
+    const editModal = new bootstrap.Modal(document.getElementById('editUserModal'));
+    document.getElementById('userName').value = user.fullname;
+    document.getElementById('userEmail').value = user.email;
+    document.getElementById('userRole').value = user.role;
+    editModal.show();
 
-// Delete Button
-const deleteBtn = document.createElement("button");
-deleteBtn.textContent = "Delete Task";
-deleteBtn.className = 'delete-btn';
-deleteBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // 
-    taskItem.remove();
-    delete_task(taskItem.getAttribute('task-id'));
-});
-taskItem.appendChild(deleteBtn);
+    // Save changes on submit
+    document.getElementById('editUserForm').onsubmit = function (e) {
+        e.preventDefault();
+        saveChanges(user.email);
+        editModal.hide();
+    };
+}
+
+// Save Changes (AJAX)
+function saveChanges(email) {
+    const updatedName = document.getElementById('userName').value;
+    const updatedRole = document.getElementById('userRole').value;
+
+    fetch('../php/user_edit.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: email,
+            fullname: updatedName,
+            role: updatedRole,
+        }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('User updated successfully');
+                location.reload(); // Reload the table
+            } else {
+                alert('Error updating user: ' + data.error);
+            }
+        })
+        .catch(error => console.error('Error updating user:', error));
+}
+
+// Confirm Delete
+function confirmDelete(email) {
+    if (confirm('Are you sure you want to delete this user?')) {
+        deleteUser(email);
+    }
+}
+
+// Delete User (AJAX)
+function deleteUser(email) {
+    fetch('../php/user_delete.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('User deleted successfully');
+                location.reload(); // Reload the table
+            } else {
+                alert('Error deleting user: ' + data.error);
+            }
+        })
+        .catch(error => console.error('Error deleting user:', error));
+}
