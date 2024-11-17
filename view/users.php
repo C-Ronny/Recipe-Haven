@@ -33,13 +33,13 @@
 
     <div class="content">
       <h1>Users</h1>
-      <table class="content-table">
+      <!-- <table class="content-table">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Name</th>
+            <th>Full Name</th>
             <th>Email</th>
-            <th>Actions</th>
+            <th>Role</th>
+            <th>Registration Date</th>
           </tr>
         </thead>
         <tbody>
@@ -184,6 +184,19 @@
             </td>
           </tr>
         </tbody>
+      </table> -->
+      <table class="content-table">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Registration Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated dynamically by user_table.js -->
+        </tbody>
       </table>
     </div>
 
@@ -277,7 +290,9 @@
       }
     </script>
 
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../functions/user_table.js"></script>
   </body>
 </html>
