@@ -41,12 +41,13 @@
             <th>Email</th>
             <th>Role</th>
             <th>Registration Date</th>
-            <th>Actions</th>
+            <th>Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
 
         <tbody>
-            <!-- Rows will be populated dynamically by user_table.js -->
+            <!-- Rows will be populated dynamically -->
         </tbody>
       </table>
     </div>
