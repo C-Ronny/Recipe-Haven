@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch user data from the server
-    fetch('../php/user_table_details_fetch.php')
+    fetch('../db/user_table_details_fetch.php')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.querySelector('.content-table tbody');
