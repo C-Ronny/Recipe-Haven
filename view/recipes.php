@@ -68,7 +68,7 @@
         </tbody>
       </table>
 
-      <button id="create" onclick="editRecipe()">Add Recipe</button>
+      <button class="btn btn-primary w-100" id="create" onclick="showAddRecipeModal()">Add Recipe</button>
       
     </div>
 
@@ -118,9 +118,7 @@
                 <input type="number" class="form-control" id="cookTime">
               </div>
 
-              <button class="btn btn-primary w-100" id="create" onclick="showAddRecipeModal()">Add Recipe</button>
-
-              <!-- <button type="submit" class="btn btn-primary w-100">Add Recipe</button> -->
+              <button type="submit" class="btn btn-primary w-100">Add Recipe</button>
             </form>
           </div>
         </div>
