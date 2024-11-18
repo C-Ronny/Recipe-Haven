@@ -88,91 +88,43 @@
                 <input type="text" class="form-control" id="recipeName" placeholder="Enter the recipe name">
               </div>
 
-              <!-- Recipe Image -->
+              <!-- Recipe Type -->
               <div class="mb-3">
-                <label for="recipeImage" class="form-label">Recipe Image</label>
-                <input type="file" class="form-control" id="recipeImage" accept="image/*">
+                <label for="recipeType" class="form-label">Recipe Type</label>
+                <select class="form-control" id="recipeType">
+                  <option value="breakfast">Breakfast</option>
+                  <option value="lunch">Lunch</option>
+                  <option value="dinner">Dinner</option>
+                  <option value="snack">Snack</option>
+                  <option value="dessert">Dessert</option>
+                </select>
               </div>
 
-              <!-- Ingredients Section -->
+              <!-- Description -->
               <div class="mb-3">
-                <h5>Ingredients</h5>
-                <label for="ingredientOrigin" class="form-label">Origin</label>
-                <input type="text" class="form-control mb-2" id="ingredientOrigin" placeholder="Enter the origin of the ingredients">
-                
-                <label for="ingredientNames" class="form-label">Ingredient Names</label>
-                <textarea class="form-control mb-2" id="ingredientNames" rows="2" placeholder="Enter the names of ingredients (comma-separated)"></textarea>
-                
-                <label for="nutritionalValue" class="form-label">Nutritional Value</label>
-                <textarea class="form-control mb-2" id="nutritionalValue" rows="2" placeholder="Enter the nutritional value of ingredients"></textarea>
-                
-                <label for="allergenInfo" class="form-label">Allergen Information</label>
-                <textarea class="form-control mb-2" id="allergenInfo" rows="2" placeholder="List any allergens"></textarea>
-                
-                <label for="shelfLife" class="form-label">Shelf Life</label>
-                <input type="text" class="form-control mb-2" id="shelfLife" placeholder="Enter the shelf life of ingredients/dish">
-
-                <div class="row">
-                  <div class="col-md-6">
-                    <label for="quantity" class="form-label">Quantity</label>
-                    <input type="number" class="form-control" id="quantity" placeholder="Enter the quantity">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="unit" class="form-label">Unit</label>
-                    <input type="text" class="form-control" id="unit" placeholder="Enter the unit (e.g., cups, grams)">
-                  </div>
-                </div>
+                <label for="foodDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="foodDescription" rows="3"></textarea>
               </div>
 
               <!-- Preparation Time -->
               <div class="mb-3">
                 <label for="prepTime" class="form-label">Preparation Time (in minutes)</label>
-                <input type="number" class="form-control" id="prepTime" placeholder="Enter the preparation time">
+                <input type="number" class="form-control" id="prepTime">
               </div>
 
               <!-- Cooking Time -->
               <div class="mb-3">
                 <label for="cookTime" class="form-label">Cooking Time (in minutes)</label>
-                <input type="number" class="form-control" id="cookTime" placeholder="Enter the cooking time">
+                <input type="number" class="form-control" id="cookTime">
               </div>
 
-              <!-- Serving Size -->
-              <div class="mb-3">
-                <label for="servingSize" class="form-label">Serving Size</label>
-                <input type="text" class="form-control" id="servingSize" placeholder="Enter the serving size">
-              </div>
-
-              <!-- Food Description -->
-              <div class="mb-3">
-                <label for="foodDescription" class="form-label">Food Description</label>
-                <textarea class="form-control" id="foodDescription" rows="3" placeholder="Enter a brief description of the dish"></textarea>
-              </div>
-
-              <!-- Calories per Serving -->
-              <div class="mb-3">
-                <label for="calories" class="form-label">Calories per Serving</label>
-                <input type="number" class="form-control" id="calories" placeholder="Enter the number of calories per serving">
-              </div>
-
-              <!-- Food Origin -->
-              <div class="mb-3">
-                <label for="foodOrigin" class="form-label">Food Origin</label>
-                <input type="text" class="form-control" id="foodOrigin" placeholder="Enter the geographical or cultural origin of the dish">
-              </div>
-
-              <!-- Instructions -->
-              <div class="mb-3">
-                <label for="instructions" class="form-label">Instructions</label>
-                <textarea class="form-control" id="instructions" rows="5" placeholder="Enter the step-by-step preparation and cooking instructions"></textarea>
-              </div>
-
-              <!-- Save Changes Button -->
-              <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+              <button type="submit" class="btn btn-primary w-100">Add Recipe</button>
             </form>
           </div>
         </div>
       </div>
     </div>
+
 
       
 
