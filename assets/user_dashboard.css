@@ -59,6 +59,50 @@ body {
 }
 
 
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #009879;
+}
+
+.card p, .card ul {
+  font-size: 16px;
+  color: #333;
+}
+
+.card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.card ul li {
+  margin: 8px 0;
+}
+
+.card a {
+  color: #009879;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+
+
+
 
 
 nav {

@@ -45,6 +45,41 @@
   <div class="content">
     <h1>Account</h1>
 
+    <!------------------------------------------------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------>
+
+    <h2>Welcome, Eugene Daniels</h2>
+
+    <!-- User Info Card -->
+    <div class="card">
+      <h2>User Information</h2>
+      <p><strong>First Name:</strong> Eugene</p>
+      <p><strong>Last Name:</strong> Daniels</p>
+      <p><strong>Email:</strong> superadmin@gmail.com</p>
+      <p><strong>Role:</strong> Super Admin</p>
+      <p><strong>Member Since:</strong> November 7, 2024</p>
+    </div>
+
+    <!-- Saved Recipes Card -->
+    <div class="card">
+      <h2>Saved Recipes</h2>
+      <p>You have <strong>8</strong> saved recipes. <a href="saved_recipes.php">View All</a></p>
+    </div>
+
+    <!-- Recent Activity Card -->
+    <div class="card">
+      <h2>Recent Activity</h2>
+      <ul>
+        <li>Rated <strong>Avocado Toast</strong> ★★★★☆</li>
+        <li>Saved <strong>Banana Oat Waffles</strong> to favorites</li>
+        <li>Commented on <strong>Blueberry Pancakes:</strong> "Delicious recipe, but a bit too sweet for my taste!"</li>
+      </ul>
+    </div>
+  </div>
+  <!------------------------------------------------------------------------------------------------------------------------------------------------>
+  <!------------------------------------------------------------------------------------------------------------------------------------------------>
+  <!------------------------------------------------------------------------------------------------------------------------------------------------>
 
 
   </div>
