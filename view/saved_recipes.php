@@ -45,7 +45,9 @@
   <div class="content">
     <h1>My Recipes</h1>
 
-    <h2>Work in Progress</h2>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <h2>Work in Progress!!</h2>
 
   </div>
 
