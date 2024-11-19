@@ -45,6 +45,8 @@
   <div class="content">
     <h1>My Recipes</h1>
 
+    <h2>Work in Progress</h2>
+
   </div>
 
   <script src="../functions/dashboard.js"></script>
