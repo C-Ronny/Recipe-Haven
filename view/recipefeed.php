@@ -48,7 +48,7 @@
 
 		<!--Recipe Feed Page-->
 		<div class="recipe-feed-layout">
-			<!-- Breakfast Section
+			<!--Breakfast Section-->
 			<div id="breakfast" class="food-type">
 				<h1 class="fname">Breakfast Recipes</h1>
 				<div class="scroll-wrapper">
@@ -104,85 +104,8 @@
 
 					</div>
 				</div>
-			</div> -->
-
-			<!--Breakfast Section-->
-<div id="breakfast" class="food-type">
-    <h1 class="fname">Breakfast Recipes</h1>
-    <div class="scroll-wrapper">
-        <div id="breakfast-scroll" class="scroll-container">
-            <!-- Recipe Items -->
-            <div class="Img">
-                <img src="../assets/images/Breakfast/Avocado-Toast.jpg" class="images">
-                <div class="image-info">Avocado Toast</div>
-                <div class="recipe-description">Creamy avocado spread on toasted bread, topped with fresh herbs and a sprinkle of chili flakes.</div>
-                <div class="star-rating">Rating: ★★★★☆</div>
-            </div>
-            <div class="Img">
-                <img src="../assets/images/Breakfast/Banana-Oat-Waffles.jpeg" class="images">
-                <div class="image-info">Banana Oat Waffles</div>
-                <div class="recipe-description">Fluffy waffles made with ripe bananas and oats, perfect for a healthy breakfast.</div>
-                <div class="star-rating">Rating: ★★★★★</div>
-            </div>
-            <div class="Img">
-                <img src="../assets/images/Breakfast/Blueberry Pancakes.jpg" class="images">
-                <div class="image-info">Blueberry Pancakes</div>
-                <div class="recipe-description">Light and fluffy pancakes bursting with fresh blueberries, served with maple syrup.</div>
-                <div class="star-rating">Rating: ★★★☆☆</div>
-            </div>
-			<div class="Img">
-				<img src="../assets/images/Breakfast/Avocado-Toast.jpg" class="images">
-				<div class="image-info">Avocado Toast</div>
-				<div class="recipe-description">Creamy avocado spread on toasted bread, topped with fresh herbs and a sprinkle of chili flakes.</div>
-				<div class="star-rating">Rating: ★★★★☆</div>
 			</div>
-			<div class="Img">
-				<img src="../assets/images/Breakfast/Banana-Oat-Waffles.jpeg" class="images">
-				<div class="image-info">Banana Oat Waffles</div>
-				<div class="recipe-description">Fluffy waffles made with ripe bananas and oats, perfect for a healthy breakfast.</div>
-				<div class="star-rating">Rating: ★★★★★</div>
-			</div>
-			<div class="Img">
-				<img src="../assets/images/Breakfast/Blueberry Pancakes.jpg" class="images">
-				<div class="image-info">Blueberry Pancakes</div>
-				<div class="recipe-description">Light and fluffy pancakes bursting with fresh blueberries, served with maple syrup.</div>
-				<div class="star-rating">Rating: ★★★☆☆</div>
-			</div>
-			<div class="Img">
-				<img src="../assets/images/Breakfast/French Toast with Cranberries and Pecans.jpg" class="images">
-				<div class="image-info">French Toast with Cranberries and Pecans</div>
-				<div class="recipe-description">Deliciously sweet French toast topped with tart cranberries and crunchy pecans.</div>
-				<div class="star-rating">Rating: ★★★★☆</div>
-			</div>
-			<div class="Img">
-				<img src="../assets/images/Breakfast/Healthy_Breakfast_Bowl.jpg" class="images">
-				<div class="image-info">Healthy Breakfast Bowl</div>
-				<div class="recipe-description">A nourishing bowl filled with yogurt, fresh fruits, granola, and a drizzle of honey.</div>
-				<div class="star-rating">Rating: ★★★★★</div>
-			</div>
-			<div class="Img">
-				<img src="../assets/images/Breakfast/Irish_Weekend_Fry-Up.jpeg" class="images">
-				<div class="image-info">Irish Weekend Fry-Up</div>
-				<div class="recipe-description">A hearty breakfast platter featuring eggs, sausages, bacon, beans, and toast.</div>
-				<div class="star-rating">Rating: ★★★★☆</div>
-			</div>
-			<div class="Img">
-				<img src="../assets/images/Breakfast/Omelette.jpeg" class="images">
-				<div class="image-info">Omelette</div>
-				<div class="recipe-description">A fluffy omelette filled with your choice of cheese, vegetables, and herbs.</div>
-				<div class="star-rating">Rating: ★★★★★</div>
-			</div>
-			<div class="Img">
-				<img src="../assets/images/Breakfast/Stuffed-Ham-and-Cheese Croissant Casserole.jpg" class="images">
-				<div class="image-info">Stuffed Ham and Cheese Croissant Casserole</div>
-				<div class="recipe-description">A savory casserole made with buttery croissants, ham, and melted cheese, baked to perfection.</div>
-				<div class="star-rating">Rating: ★★★★☆</div>
-			</div>
-            
-        </div>
-    </div>
-</div>
-
+			
 
 			<!--Snack Section-->
 			<div id="snack" class="food-type">
