@@ -29,7 +29,7 @@
       <table class="content-table">
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Name</th>
             <th>Title</th>
             <th>Author</th>
             <th>Recipe Type</th>
@@ -42,7 +42,7 @@
         </tbody>
       </table>
 
-      <button class="btn btn-primary mt-3" id="create">Add Recipe</button>
+      <button class="btn btn-primary mt-3" id="create" >Add Recipe</button>
     </div>
 
     <!-- Modal for adding/editing recipes -->
