@@ -65,7 +65,7 @@ nav h1 {
   font-size: 18px;
 }
 
-/* Recipe Feed Layout */
+/* Recipe Feed Layout
 .recipe-feed-layout {
   display: flex;
   flex-direction: column;
@@ -104,8 +104,76 @@ nav h1 {
   gap: 20px;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+} 
+*/
+
+/* Food Type Section Styling */
+.food-type {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Scroll Wrapper */
+.scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Scroll Container for Horizontal Scrolling */
+.scroll-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide the Scrollbar */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.scroll-container {
   scrollbar-width: none; /* Firefox */
 }
+
+/* Individual Recipe Card */
+.Img {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.images {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-info {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.recipe-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.star-rating {
+  font-size: 14px;
+  color: gold;
+  margin-top: 5px;
+}
+
+
 
 /* .scroll-wrapper{
   overflow-x: auto;

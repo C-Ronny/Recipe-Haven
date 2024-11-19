@@ -48,7 +48,7 @@
 
 		<!--Recipe Feed Page-->
 		<div class="recipe-feed-layout">
-			<!--Breakfast Section-->
+			<!-- Breakfast Section
 			<div id="breakfast" class="food-type">
 				<h1 class="fname">Breakfast Recipes</h1>
 				<div class="scroll-wrapper">
@@ -104,7 +104,37 @@
 
 					</div>
 				</div>
-			</div>
+			</div> -->
+
+			<!--Breakfast Section-->
+<div id="breakfast" class="food-type">
+    <h1 class="fname">Breakfast Recipes</h1>
+    <div class="scroll-wrapper">
+        <div id="breakfast-scroll" class="scroll-container">
+            <!-- Recipe Items -->
+            <div class="Img">
+                <img src="../assets/images/Breakfast/Avocado-Toast.jpg" class="images">
+                <div class="image-info">Avocado Toast</div>
+                <div class="recipe-description">Creamy avocado spread on toasted bread, topped with fresh herbs and a sprinkle of chili flakes.</div>
+                <div class="star-rating">Rating: ★★★★☆</div>
+            </div>
+            <div class="Img">
+                <img src="../assets/images/Breakfast/Banana-Oat-Waffles.jpeg" class="images">
+                <div class="image-info">Banana Oat Waffles</div>
+                <div class="recipe-description">Fluffy waffles made with ripe bananas and oats, perfect for a healthy breakfast.</div>
+                <div class="star-rating">Rating: ★★★★★</div>
+            </div>
+            <div class="Img">
+                <img src="../assets/images/Breakfast/Blueberry Pancakes.jpg" class="images">
+                <div class="image-info">Blueberry Pancakes</div>
+                <div class="recipe-description">Light and fluffy pancakes bursting with fresh blueberries, served with maple syrup.</div>
+                <div class="star-rating">Rating: ★★★☆☆</div>
+            </div>
+            <!-- Add more recipes as needed -->
+        </div>
+    </div>
+</div>
+
 
 			<!--Snack Section-->
 			<div id="snack" class="food-type">
