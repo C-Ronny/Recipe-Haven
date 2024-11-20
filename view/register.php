@@ -58,7 +58,7 @@
 
             <div style="text-align: center;">
                 <span class="text" style="display: inline-block;">Or do you have an account?</span>
-                <a href="logIn.php" class="text" style="display: inline-block;"><p id="log-back-in">Log In</p></a>
+                <a href="login.php" class="text" style="display: inline-block;"><p id="log-back-in">Log In</p></a>
             </div>
         </div>
     </div>
