@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 
-DROP DATABASE IF EXISTS recipe_db;
-CREATE DATABASE recipe_db;
-USE recipe_db;
+-- DROP DATABASE IF EXISTS recipe_db;
+-- CREATE DATABASE recipe_db;
+-- USE recipe_db;
 
 
 CREATE TABLE `comments` (
@@ -152,6 +152,17 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `fname`, `lname`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES
 (1, 'Eugene', 'Daniels', 'superadmin@gmail.com', '$2y$10$7WmxtQVB6.CiA7nkwfc4ROGKmSboAjpGfV0CnObeFivXZ8jfW/9De', 1, '2024-11-07 20:20:47', '2024-11-07 20:20:47'),
 (2, 'Admin', 'User', 'admin@gmail.com', '$2y$10$xarTXka8c.CHIWk6X06VgOEnpXt7VH3cKgmUilnTJL.LdRNIL2Sty', 2, '2024-11-07 20:22:34', '2024-11-07 20:22:34');
+
+--
+-- Dumping data for table `foods`
+--
+
+INSERT INTO `foods` 
+(`food_id`, `name`, `origin`, `type`, `is_healthy`, `instructions`, `description`, `preparation_time`, `cooking_time`, `serving_size`, `calories_per_serving`, `image_url`, `created_by`, `is_approved`)
+VALUES
+(1, 'Avocado Toast', 'American', 'breakfast', 1, 'Toast bread and spread mashed avocado on top. Sprinkle with salt and chili flakes.', 'Healthy and easy avocado toast.', 5, 0, 1, 150, 'images/avocado-toast.jpg', 1, 1);
+
+
 
 --
 -- Indexes for dumped tables

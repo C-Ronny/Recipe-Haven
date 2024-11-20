@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Check if email already exists
-    $query = 'SELECT email FROM Users WHERE email = ?';
+    $query = 'SELECT email FROM users WHERE email = ?';
     $stmt = $conn->prepare($query);
     $stmt->bind_param('s', $email);
     $stmt->execute();
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         // Hash the password and insert new user details
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-        $insert_query = 'INSERT INTO Users (fname, lname, email, password, role) VALUES (?, ?, ?, ?, ?)';
+        $insert_query = 'INSERT INTO users (fname, lname, email, password, role) VALUES (?, ?, ?, ?, ?)';
         $stmt = $conn->prepare($insert_query);
         $stmt->bind_param('ssssi', $fname, $lname, $email, $hashed_password, $role);
 
@@ -49,4 +49,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
     $conn->close();
 }
-?>

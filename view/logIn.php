@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Recipe Haven | Login</title>
     <link rel="stylesheet" href="../assets/Login.css">
@@ -17,7 +18,7 @@
                 <br>
                 <input style="border-radius: 20px; border: none; width: 300px; height: 30px; margin-top: 12px;" name="email" type="email" id="email" placeholder="  Email" minlength="3" required>
                 <br><br>
-                
+
                 <!--Password-->
                 <label class="text" for="password">Password</label>
                 <br>
@@ -88,4 +89,5 @@
         }
     </script>
 </body>
+
 </html>
